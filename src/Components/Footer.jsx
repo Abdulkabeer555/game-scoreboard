@@ -1,0 +1,41 @@
+// src/components/Footer.jsx
+import React from 'react';
+
+function Footer() {
+  return (
+    <footer style={styles.footer}>
+      <div style={styles.content}>
+        <p style={styles.text}>© {new Date().getFullYear()} Scoreboard App. All rights reserved.</p>
+        <p style={styles.subtext}>Made with 💙 for game lovers.</p>
+      </div>
+    </footer>
+  );
+}
+
+const styles = {
+  footer: {
+    backgroundColor: '#2c3e50',
+    color: '#fff',
+    padding: '20px',
+    textAlign: 'center',
+    marginTop: 'auto',
+    width: '100%',
+    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+    boxShadow: '0 -2px 5px rgba(0,0,0,0.1)',
+  },
+  content: {
+    maxWidth: '900px',
+    margin: '0 auto',
+  },
+  text: {
+    margin: '5px 0',
+    fontSize: '16px',
+  },
+  subtext: {
+    margin: '0',
+    fontSize: '14px',
+    color: '#ccc',
+  }
+};
+
+export default Footer;
