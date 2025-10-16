@@ -15,26 +15,28 @@ const styles = {
   footer: {
     backgroundColor: '#2c3e50',
     color: '#fff',
-    padding: '20px',
+    padding: '16px 10px',
     textAlign: 'center',
-    marginTop: 'auto',
     width: '100%',
     fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
     boxShadow: '0 -2px 5px rgba(0,0,0,0.1)',
+    boxSizing: 'border-box',
   },
   content: {
-    maxWidth: '900px',
+    width: '100%',
+    maxWidth: '100%',
     margin: '0 auto',
+    overflowWrap: 'break-word',
   },
   text: {
     margin: '5px 0',
-    fontSize: '16px',
+    fontSize: '14px',
   },
   subtext: {
-    margin: '0',
-    fontSize: '14px',
+    margin: 0,
+    fontSize: '13px',
     color: '#ccc',
-  }
+  },
 };
 
 export default Footer;

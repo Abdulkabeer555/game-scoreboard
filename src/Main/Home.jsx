@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function Home() {
-  const [players, setPlayers] = useState(0);
-  const [eliminationScore, setEliminationScore] = useState(0);
+  const [players, setPlayers] = useState();
+  const [eliminationScore, setEliminationScore] = useState();
   const [showPlayerInputs, setShowPlayerInputs] = useState(false);
   const [playerNames, setPlayerNames] = useState([]);
 
