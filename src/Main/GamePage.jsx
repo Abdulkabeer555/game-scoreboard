@@ -63,7 +63,6 @@ function GamePage() {
     <div style={styles.page}>
       <h2 style={styles.title}>Game Scoreboard</h2>
 
-      {/* ✅ Responsive Table Wrapper */}
       <div style={styles.tableWrapper}>
         <table style={styles.table}>
           <thead style={styles.thead}>
@@ -120,7 +119,6 @@ function GamePage() {
         </table>
       </div>
 
-      {/* ✅ Submit Scores Button */}
       {rounds > 0 && (
         <div style={{ textAlign: 'center', marginTop: '20px' }}>
           <button
@@ -132,7 +130,6 @@ function GamePage() {
         </div>
       )}
 
-      {/* ✅ Winner Selection */}
       <div style={{ marginTop: '30px', textAlign: 'center' }}>
         <h3 style={{ marginBottom: '10px' }}>Select Winner for Game {rounds + 1}</h3>
         {playerNames.map((name, idx) => (
@@ -168,7 +165,6 @@ function GamePage() {
   );
 }
 
-// ✅ Styles
 const styles = {
   page: {
     minHeight: '100vh',

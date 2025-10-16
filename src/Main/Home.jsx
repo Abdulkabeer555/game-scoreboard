@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function System() {
+function Home() {
   const [players, setPlayers] = useState(0);
   const [eliminationScore, setEliminationScore] = useState(0);
   const [showPlayerInputs, setShowPlayerInputs] = useState(false);
@@ -92,7 +92,6 @@ function System() {
 }
 
 const styles = {
-  // OUTER WRAPPER that takes full width and centers content
   outerWrapper: {
     width: '100%',
     minHeight: '50vh',
@@ -183,4 +182,4 @@ const styles = {
   }
 };
 
-export default System;
+export default Home;

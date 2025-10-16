@@ -8,7 +8,7 @@ function Navbar() {
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
-      if (window.innerWidth > 768) setMenuOpen(false); // Close on resize
+      if (window.innerWidth > 768) setMenuOpen(false);
     };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -18,14 +18,12 @@ function Navbar() {
     <nav style={styles.navbar}>
       <div style={styles.logo}>🏆 Game Scoreboard</div>
 
-      {/* ☰ Hamburger only on mobile */}
       {isMobile && (
         <div style={styles.menuButton} onClick={() => setMenuOpen(!menuOpen)}>
           ☰
         </div>
       )}
 
-      {/* Animated Links Container */}
       <div
         style={{
           ...(isMobile ? styles.linksMobile : styles.linksDesktop),
