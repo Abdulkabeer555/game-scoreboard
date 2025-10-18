@@ -59,6 +59,17 @@ function GamePage() {
     setCurrentRoundInputs({});
   };
 
+  // ✅ RESET SCORES FUNCTION
+  const handleResetScores = () => {
+    const confirmed = window.confirm('Are you sure you want to reset all scores?');
+    if (!confirmed) return;
+
+    setGameData(playerNames.map(() => []));
+    setRounds(0);
+    setLastWinnerIndex(null);
+    setCurrentRoundInputs({});
+  };
+
   return (
     <div style={styles.page}>
       <h2 style={styles.title}>Game Scoreboard</h2>
@@ -153,6 +164,7 @@ function GamePage() {
         ))}
       </div>
 
+      {/* 🛑 Elimination Score Info */}
       <p style={{
         textAlign: 'center',
         marginTop: '20px',
@@ -161,10 +173,29 @@ function GamePage() {
       }}>
         🛑 Elimination Score: <strong>{eliminationScore}</strong>
       </p>
+
+      {/* 🔄 RESET SCORES BUTTON */}
+      <div style={{ textAlign: 'center', marginTop: '20px' }}>
+        <button
+          onClick={handleResetScores}
+          style={{
+            padding: '10px 30px',
+            fontSize: '16px',
+            borderRadius: '5px',
+            backgroundColor: '#dc3545', // red
+            color: '#fff',
+            border: 'none',
+            cursor: 'pointer'
+          }}
+        >
+          🔄 Reset Scores
+        </button>
+      </div>
     </div>
   );
 }
 
+// Styles
 const styles = {
   page: {
     minHeight: '100vh',
@@ -201,7 +232,7 @@ const styles = {
     padding: '10px 30px',
     fontSize: '16px',
     borderRadius: '5px',
-    backgroundColor: '#28a745',
+    backgroundColor: '#28a745', // green
     color: '#fff',
     border: 'none',
     cursor: 'pointer'
